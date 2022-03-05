@@ -1,0 +1,7 @@
+SELECT qwe.advertiser_id 
+FROM `bigquery-public-data.google_political_ads.advertiser_declared_stats` qwe 
+LEFT JOIN `bigquery-public-data.google_political_ads.advertiser_geo_spend` asd 
+ON qwe.advertiser_id=asd.advertiser_id
+GROUP BY qwe.advertiser_id
+limit 100
+
